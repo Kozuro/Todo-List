@@ -20,7 +20,6 @@
 
 .buttons__button:hover {
     color: hsl(180, 100%, 15%);
-
 }
 
 .buttons__button:active {
