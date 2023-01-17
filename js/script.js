@@ -65,16 +65,16 @@
     const renderButtons = () => {
         const buttonsElement = document.querySelector(".js-buttons");
 
-        if (!tasks.lenght) {
+        if (!tasks.length) {
             buttonsElement.innerHTML = "";
             return;
         }
 
         buttonsElement.innerHTML = `
               <button class="buttons__button js-toggleHideDoneTasks">
-                ${hideDoneTasks ? "Pokaż" : "Ukryj"} zrobione
+                ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
               </button>
-              <button class="buttons_button js-markAllDone" ${tasks.every(({ done }) => done ? "disabled" : "")}>
+              <button class="buttons__button js-markAllDone" ${ tasks.every(({ done }) => done ? " disabled" : "")}>
                 Ukończ wszystkie
               </button>
             `;
@@ -116,9 +116,10 @@
 
     const render = () => {
         renderTasks();
-        renderButtons();
         bindRemoveEvents();
         bindToggleDoneEvents();
+        
+        renderButtons();
         bindButtonsEvents();
     };
 
